@@ -1,0 +1,74 @@
+root_dir=$(shell pwd)
+project_name=resume
+
+src_dir=$(root_dir)/src
+src_name=michael-hawkins
+build_dir=$(root_dir)/build
+
+.PHONY: clean
+
+all: pdf html
+
+clean:
+	$(info removing target directories: $(pdf_target) $(html_target) $(build_dir))
+	rm -Rf $(pdf_target) $(html_target) $(build_dir)
+
+
+
+# Create the build directory.  We use a build directory to avoid
+# polluting the source directory with latex output files
+build_dir:
+	$(info Creating build directory)
+	mkdir -p $(build_dir)
+
+# copy source files to the build directory
+copy_source: build_dir
+	$(info Copying source files to build directory)
+	cp $(src_dir)/tex/*.* $(build_dir)/
+
+
+#
+# PDF
+#
+
+pdf_target=$(root_dir)/docs/pdf
+pdf=pdflatex
+pdf_opts=--output-directory=$(pdf_target)
+
+# Create the PDF output directory
+pdf_dir:
+	$(info Creating the PDF output directory)
+	mkdir -p $(pdf_target)
+
+# Create PDF output from source
+pdf: copy_source pdf_dir
+	cd $(build_dir); \
+	$(pdf) $(pdf_opts) $(src_name).tex
+
+
+#
+# HTML
+#
+htlatex_opts_tex4ht.sty="$(root_dir)/config/tex4ht.cfg"
+htlatex_opts_tex4ht=""
+htlatex_opts_t4ht=""
+
+html_target=$(root_dir)/docs
+html=htlatex
+html_opts=$(htlatex_opts_tex4ht.sty) $(htlatex_opts_tex4ht) $(htlatex_opts_t4ht)
+
+# Create HTML target dir and copy supplimentry files to it
+html_dir:
+	$(info Creating the HTML output directory)
+	mkdir -p $(html_target)
+	cp -R $(src_dir)/css $(html_target)
+	cp -R $(src_dir)/js $(html_target)
+
+# Create HTML output from source.
+# TODO configure processor to output to correct directory so we don't
+# need to cd into it and move the output after
+html: copy_source html_dir
+	cd $(build_dir);\
+	$(html) $(src_name).tex $(html_opts);\
+	cp $(src_name).html $(html_target)/index.html
+

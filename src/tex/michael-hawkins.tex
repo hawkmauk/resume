@@ -1,0 +1,190 @@
+\documentclass[]{article}
+
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+
+%
+% rules to manage differences in publishing medium
+%
+% Define an ifnotpdf conditional to handle processing
+% by non-pdf processors
+\newif\ifnotpdf
+\ifpdf\notpdffalse\else\notpdftrue\fi
+% If this is a PDF then use our PDF style
+\ifpdf
+	\usepackage[a4paper]{resume-pdf}
+\fi
+
+
+%
+% TITLE HEaDER
+%
+\title{Michael Hawkins}
+% As the author is actually the title we want contact info here
+\author{\href{mailto:michael.hawkins@protonmail.com}{michael.hawkins@protonmail.com} | +44 (0)779 308 1223}
+\date{Last Updated: \today}
+
+\begin{document}
+%
+\maketitle
+%
+% COLUMN ONE
+%
+\begin{minipage}[t]{0.30\textwidth}
+%
+%
+%      SKILLS
+%
+\section{Skills}
+%
+	\subsection{Technical}
+	Analysis Documentation
+	\textit{Systems Integration}
+	Enterprise Software
+	\textit{Distributed Systems}
+	Devops
+	\textit{Networking}
+	Security
+	\textit{Bitcoin}
+	Lightning
+	\textit{Decentralised Identifiers}
+	Verifiable Credentials
+	\textit{Encryption}
+	\subsection{Consulting}
+	ITILv3
+	\textit{Project Management}
+	Software Integration
+	\textit{Agile Delivery}
+	Service Governance
+	\textit{Security}
+	Requirements Analysis
+	\textit{Presenting}
+	Training
+	\subsection{Programming}
+	SQL
+    \textit{autotools}
+    C++
+	\textit{Javascript}
+	node.js
+	\textit{Python}
+	Java
+	\textit{\LaTeX\ } 
+	HTML
+	\textit{XML}
+	XSLT
+	\textit{git}
+
+%
+%      CAREER HIGHLIGHTS
+%
+\section{Career Highlights}
+%
+	\subsection{Prototype contactless bitcoin lighning payments}
+	Add functionality to open source mobile wallet and configure a R-PI with RC532 chip 
+	\subsection{Migration of documentation to multi platform publishing}
+	Improved quality, reduced duplication and decoupled content from presentation
+	\subsection{Establishing Technical Account Manager role}
+	Developing processes and improving relationships with key customers
+	\subsection{Develop components and design patterns for DSL}
+	Reduction in code reuse and defects for scripting projects
+%
+%
+%     EDUCATION
+%
+\section{Professional Training}
+%	
+	\subsection{Beginning C++ Programming}
+	Udemy \textit{2020}
+%	
+	\subsection{Complete Node.js Developer}
+	Udemy \textit{2020}
+%	
+%	\subsection{Smart Contracts}
+%	Applied Blockchain Labs \textit{2018}
+%	
+	\subsection{ITIL v3 Foundation}
+	QA Learning \textit{2017}
+%	
+	\subsection{Organizational Data Security}
+	Cybrary \textit{2016}
+%		
+	\subsection{Writing Queries Using SQL}
+	QA Learning \textit{2012}
+%	
+	\subsection{Leaders in Agile series}
+	Kent Beck, Aslam Khan \textit{2011}
+%	
+	\subsection{Agile Software Projects}
+	Mountain Goat Software \textit{2011}
+%
+\end{minipage}
+\hfill
+%
+% COLUMN TWO
+%
+\begin{minipage}[t]{0.60\textwidth}
+%
+%
+% Personal Statement
+%
+\section{Personal Statement}
+A forward thinking strategist and customer-centric Technical Leader with over 20 years experience within high-pressure environments, providing technical expertise for business critical software; a strong leader and relationship builder with clients, partners and technology vendors, trusted professional with accountability for KPIs and SLAs targets. Brings to the fore, governance, service management, and continuous improvement, as well as key client and stakeholder engagement. Calm and analytical with exceptional team collaboration and mentoring skills; proven ability to create sustainable, scalable and high performing solutions closely aligned with clients expectations and service requirements. Consistently demonstrates high standards of professionalism and integrity, and applies sound judgement to decision-making processes. Renowned as a strong and supportive Team Leader committed to the achievement of individual and company shared goals.
+%
+%
+% Experience
+%
+\vspace{-12pt}
+\section{Experience}
+	%
+	% Advanced
+	%
+	\subsection{Technical Consulting Team Lead}
+	\textit{ Advanced | Jan 2015 - Present }
+	\begin{itemize}
+	\vspace{6pt}
+		\item Provides leadership in a team of 6 technical consultants
+		\item Managing change for customer software solutions
+		\item Technical lead on integration projects using SOAP / REST web services
+		\item Develop and deliver training material for internal and external technical teams
+		\item Delivering 3rd line support for issue resolution and root cause analysis
+	\end{itemize}
+	%
+	% Runcrypto
+	%
+	\subsection{Owner}
+	\textit{ Runcrypto Ltd | July 2017 - Present }
+	\begin{itemize}
+		\item Development of products and online eCommerce site
+		\item Building, securing and monitoring bitcoin payments infrastructure
+		\item Managing small X11 mining operation
+		\item Providing contributions to open source software projects
+		\item Writing industry focused blog posts
+	\end{itemize}
+	%
+	% Egain
+	%
+	\subsection{Technical Account Manager}
+	\textit{ eGain Communications | Jun 2013 - Jan 2015 }
+	\begin{itemize}
+		\item Building long lasting relationships through managing technical aspects of software solutions
+		\item Chair weekly meetings with 2 - 4 account stakeholders
+		\item Deliver project govenance for professional services team
+		\item Lead technical teams across 3 departments to work on high impact incidents
+		\item Develop KPIs and SLAs targets with stakeholders
+	\end{itemize}
+	%
+	% Pitney Bowes
+	%
+	\subsection{Professional Services Consultant}
+	\textit{Pitney Bowes Software | Apr 2008 - Jun 2013}
+	\begin{itemize}
+		\item Managing projects throughout SDLC, with teams of 1-4 developers over 3-12 months
+		\item Responsable for engaging with sales prospects to plan, document, implement and support software systems
+		\item Providing relational database design, implementation and optimisation
+		\item Provide 2nd and 3rd line support for the business unit's software portfolio
+	\end{itemize}
+%
+\end{minipage}
+%
+\end{document}
