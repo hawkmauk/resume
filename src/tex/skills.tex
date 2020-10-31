@@ -1,0 +1,53 @@
+%
+%   SKILLS
+%
+\section{Skills}
+%
+\ifthenelse{\equal{\jobname}{\development}}{
+    \subsection{Technical}
+        \textit{Systems Integration}
+        Enterprise Software
+        \textit{Networking}
+        Security
+        \textit{Distributed Systems}
+        Encryption
+        \textit{Bitcoin}
+        Lightning
+        \textit{Decentralised Identifiers}
+        Verifiable Credentials
+    \ifthenelse{\boolean{pdf}}{\vspace{5pt}}{}
+
+    \subsection{Programming}
+        SQL
+        \textit{autotools}
+        C++
+        \textit{Javascript}
+        node.js
+        \textit{Python}
+        Java
+        \textit{\LaTeX\ } 
+        HTML
+        \textit{XML}
+        XSLT
+        \textit{git}
+    \ifthenelse{\boolean{pdf}}{\vspace{5pt}}{}
+}{}
+\ifthenelse{\equal{\jobname}{\management}}{
+    \subsection{Methodologies}
+        \textit{Extreme Ownership}
+        ITILv3
+        \textit{Agile Project Management}
+        Kanban
+    \ifthenelse{\boolean{pdf}}{\vspace{5pt}}{}
+    
+    \subsection{Key skills}
+        \textit{Delivering Change}
+        Forecasting
+        \textit{Resource Planning}
+        Reporting
+        \textit{Presenting}
+        Training
+        \textit{Recruiting}
+        Documentation
+    \ifthenelse{\boolean{pdf}}{\vspace{5pt}}{}
+}{}

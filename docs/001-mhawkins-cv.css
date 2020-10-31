@@ -1,4 +1,6 @@
 
+/* 001-mhawkins-cv.css from 001-mhawkins-cv.tex (TeX4ht) */
+
 .jumbotron{
   background-image: url("file:///home/user/Development/github/resume/docs/img/neon.jpg");
   background-color: black;
@@ -46,6 +48,9 @@ a:link {
 }
 
 a:hover {
+                                                                  
+
+                                                                  
   color: magenta;
 }
 
@@ -55,7 +60,7 @@ a:hover {
   padding: 5px 20px;
   width: 100%;
 
-                                                                  
+
   float: left;
 }
 
@@ -96,6 +101,9 @@ p {
   }
 
   #sec-5 .row {
+                                                                  
+
+                                                                  
     flex: 0 0 50%;
     max-width: 50%;
     float: left;
@@ -104,8 +112,10 @@ p {
   #sec-5\.1, #sec-5\.3 {
     clear:left;
   }
-                                                                  
 
-                                                                  
+
+
 
 }
+
+    

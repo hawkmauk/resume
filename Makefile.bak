@@ -41,7 +41,7 @@ pdf_dir:
 	mkdir -p $(pdf_target)
 
 # Create PDF output from source
-pdf: copy_source pdf_dir
+pdf: copy_source pdf_dir 001-michael_hawkins-resume.pdf 002-michael_hawkins-resume.pdf
 	cd $(build_dir); \
 	$(pdf) $(pdf_opts) $(src_name).tex
 
@@ -72,3 +72,18 @@ html: copy_source html_dir
 	$(html) $(src_name).tex $(html_opts);\
 	cp $(src_name).html $(html_target)/index.html
 
+
+
+development.tex:
+	rm -f $@
+	ln -s $(src_dir)/tex/michael-hawkins.tex $@
+
+management.tex:
+	rm -f $@
+	ln -s $(src_dir)/tex/michael-hawkins.tex $@
+
+development.pdf: development.tex
+	TEXINPUTS=$(src_dir) $(build_dir); $(pdf) $(pdf_opts) $^
+
+management.pdf: management.tex
+	TEXINPUTS=$(src_dir); $(pdf) $(pdf_opts) $^
