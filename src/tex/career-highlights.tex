@@ -1,0 +1,36 @@
+%
+%      CAREER HIGHLIGHTS
+%
+\section{Career Highlights}
+%
+\ifthenelse{\equal{\detokenize{development}}{\jobname}}{
+
+	\subsection{Prototype contactless bitcoin lighning payments}
+        \ifthenelse{\boolean{pdf}}{
+            Add functionality to open source mobile wallet and configure a
+            R-PI with RC532 chip 
+        }{
+            For my entry in the second boltathon (lightning hackathon) I wanted
+            to address a UX issue with using mobile wallets.\\
+            The existing payment methods in the market from Google and Apple
+            all utilise Near Field Communication (NFC) to provide contactless
+            payment.  This was not available for bitcoin lightning wallets.\\
+            The solution involved creating a payment requestor terminal from a
+            a Raspberry PI with a RC532 breakout board and a mobile device
+            running a bitcoin lightning wallet which I would add NFC
+            functionality to.\\
+            I was able to produce a prototype terminal and extend the open
+            source zap-android wallet, the enahnacement was refined and merged
+            into the main project.\\
+            \hyperref[see on github]{ihttps://github.com/LN-Zap/zap-android/issues/158}
+        }
+    \subsection{Migration of documentation to multi platform publishing}
+	Improved quality, reduced duplication and decoupled content from presentation
+	\subsection{Develop components and design patterns for DSL}
+	Reduction in code reuse and defects for scripting projects
+}{}
+
+\ifthenelse{\equal{\detokenize{management}}{\jobname}}{
+	\subsection{Establishing Technical Account Manager role}
+	Developing processes and improving relationships with key customers
+}{}

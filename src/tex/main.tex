@@ -1,25 +1,20 @@
-\documentclass[]{article}
+\documentclass[a4paper]{article}
 
-
+% common packages
 \usepackage[hidelinks]{hyperref}
 \usepackage[T1]{fontenc}
+\usepackage{iftex}
+\usepackage{ifthen}
 
-%
-% rules to manage differences in publishing medium
-%
-% Define an ifnotpdf conditional to handle processing
-% by non-pdf processors
-\newif\ifnotpdf
-\ifpdf\notpdffalse\else\notpdftrue\fi
-% If this is a PDF then use our PDF style
+% PDF specific package
 \ifpdf
-	\usepackage[a4paper]{resume-pdf}
+	\usepackage{resume}
 \fi
 
+%
+% TITLE HEADER
+%
 
-%
-% TITLE HEaDER
-%
 \title{Michael Hawkins}
 % As the author is actually the title we want contact info here
 \author{\href{mailto:michael.hawkins@protonmail.com}{michael.hawkins@protonmail.com} | +44 (0)779 308 1223}
@@ -32,62 +27,10 @@
 % COLUMN ONE
 %
 \begin{minipage}[t]{0.30\textwidth}
-%
-%
-%      SKILLS
-%
-\section{Skills}
-%
-	\subsection{Technical}
-	Analysis Documentation
-	\textit{Systems Integration}
-	Enterprise Software
-	\textit{Distributed Systems}
-	Devops
-	\textit{Networking}
-	Security
-	\textit{Bitcoin}
-	Lightning
-	\textit{Decentralised Identifiers}
-	Verifiable Credentials
-	\textit{Encryption}
-	\subsection{Consulting}
-	ITILv3
-	\textit{Project Management}
-	Software Integration
-	\textit{Agile Delivery}
-	Service Governance
-	\textit{Security}
-	Requirements Analysis
-	\textit{Presenting}
-	Training
-	\subsection{Programming}
-	SQL
-    \textit{autotools}
-    C++
-	\textit{Javascript}
-	node.js
-	\textit{Python}
-	Java
-	\textit{\LaTeX\ } 
-	HTML
-	\textit{XML}
-	XSLT
-	\textit{git}
 
-%
-%      CAREER HIGHLIGHTS
-%
-\section{Career Highlights}
-%
-	\subsection{Prototype contactless bitcoin lighning payments}
-	Add functionality to open source mobile wallet and configure a R-PI with RC532 chip 
-	\subsection{Migration of documentation to multi platform publishing}
-	Improved quality, reduced duplication and decoupled content from presentation
-	\subsection{Establishing Technical Account Manager role}
-	Developing processes and improving relationships with key customers
-	\subsection{Develop components and design patterns for DSL}
-	Reduction in code reuse and defects for scripting projects
+%\include{skills}
+\include{career-highlights}
+
 %
 %
 %     EDUCATION
