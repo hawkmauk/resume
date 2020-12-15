@@ -11,6 +11,10 @@
 	\usepackage{resume}
 \fi
 
+% Define commands to alias the jobname used to generate different flavours
+\newcommand{\development}{\detokenize{001-mhawkins-cv}}
+\newcommand{\management}{\detokenize{002-mhawkins-cv}}
+
 %
 % TITLE HEADER
 %
@@ -27,40 +31,9 @@
 % COLUMN ONE
 %
 \begin{minipage}[t]{0.30\textwidth}
-
-%\include{skills}
-\include{career-highlights}
-
-%
-%
-%     EDUCATION
-%
-\section{Professional Training}
-%	
-	\subsection{Beginning C++ Programming}
-	Udemy \textit{2020}
-%	
-	\subsection{Complete Node.js Developer}
-	Udemy \textit{2020}
-%	
-%	\subsection{Smart Contracts}
-%	Applied Blockchain Labs \textit{2018}
-%	
-	\subsection{ITIL v3 Foundation}
-	QA Learning \textit{2017}
-%	
-	\subsection{Organizational Data Security}
-	Cybrary \textit{2016}
-%		
-	\subsection{Writing Queries Using SQL}
-	QA Learning \textit{2012}
-%	
-	\subsection{Leaders in Agile series}
-	Kent Beck, Aslam Khan \textit{2011}
-%	
-	\subsection{Agile Software Projects}
-	Mountain Goat Software \textit{2011}
-%
+\input{career-highlights}
+\input{education}
+\input{skills}
 \end{minipage}
 \hfill
 %
@@ -72,12 +45,11 @@
 % Personal Statement
 %
 \section{Personal Statement}
-A forward thinking strategist and customer-centric Technical Leader with over 20 years experience within high-pressure environments, providing technical expertise for business critical software; a strong leader and relationship builder with clients, partners and technology vendors, trusted professional with accountability for KPIs and SLAs targets. Brings to the fore, governance, service management, and continuous improvement, as well as key client and stakeholder engagement. Calm and analytical with exceptional team collaboration and mentoring skills; proven ability to create sustainable, scalable and high performing solutions closely aligned with clients expectations and service requirements. Consistently demonstrates high standards of professionalism and integrity, and applies sound judgement to decision-making processes. Renowned as a strong and supportive Team Leader committed to the achievement of individual and company shared goals.
-%
+\input{statement}
 %
 % Experience
 %
-\vspace{-12pt}
+
 \section{Experience}
 	%
 	% Advanced
@@ -92,7 +64,8 @@ A forward thinking strategist and customer-centric Technical Leader with over 20
 		\item Develop and deliver training material for internal and external technical teams
 		\item Delivering 3rd line support for issue resolution and root cause analysis
 	\end{itemize}
-	%
+
+    %
 	% Runcrypto
 	%
 	\subsection{Owner}
@@ -104,7 +77,8 @@ A forward thinking strategist and customer-centric Technical Leader with over 20
 		\item Providing contributions to open source software projects
 		\item Writing industry focused blog posts
 	\end{itemize}
-	%
+	
+    %
 	% Egain
 	%
 	\subsection{Technical Account Manager}
@@ -116,7 +90,8 @@ A forward thinking strategist and customer-centric Technical Leader with over 20
 		\item Lead technical teams across 3 departments to work on high impact incidents
 		\item Develop KPIs and SLAs targets with stakeholders
 	\end{itemize}
-	%
+	
+    %
 	% Pitney Bowes
 	%
 	\subsection{Professional Services Consultant}

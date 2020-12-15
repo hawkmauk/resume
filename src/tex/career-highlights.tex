@@ -3,34 +3,106 @@
 %
 \section{Career Highlights}
 %
-\ifthenelse{\equal{\detokenize{development}}{\jobname}}{
-
-	\subsection{Prototype contactless bitcoin lighning payments}
-        \ifthenelse{\boolean{pdf}}{
-            Add functionality to open source mobile wallet and configure a
-            R-PI with RC532 chip 
-        }{
+% Development
+%
+\ifthenelse{\equal{\jobname}{\development}}{%
+        \subsection{\href{https://github.com/runcrypto/static-discharge}
+        {Prototype contactless bitcoin lightning payments}}
+        \ifthenelse{\boolean{pdf}}{%
+            Add functionality to open source mobile wallet and build terminal
+            with R-PI and RC532 breakout board
+            \vspace{5pt}
+        }{%
+          % Situation
             For my entry in the second boltathon (lightning hackathon) I wanted
             to address a UX issue with using mobile wallets.\\
+          % Target
             The existing payment methods in the market from Google and Apple
             all utilise Near Field Communication (NFC) to provide contactless
             payment.  This was not available for bitcoin lightning wallets.\\
+          % Action
             The solution involved creating a payment requestor terminal from a
             a Raspberry PI with a RC532 breakout board and a mobile device
             running a bitcoin lightning wallet which I would add NFC
             functionality to.\\
+          % Result
             I was able to produce a prototype terminal and extend the open
             source zap-android wallet, the enahnacement was refined and merged
             into the main project.\\
-            \hyperref[see on github]{ihttps://github.com/LN-Zap/zap-android/issues/158}
-        }
-    \subsection{Migration of documentation to multi platform publishing}
-	Improved quality, reduced duplication and decoupled content from presentation
-	\subsection{Develop components and design patterns for DSL}
-	Reduction in code reuse and defects for scripting projects
-}{}
+            \href{https://github.com/LN-Zap/zap-android/issues/158}{see on github}}
 
-\ifthenelse{\equal{\detokenize{management}}{\jobname}}{
-	\subsection{Establishing Technical Account Manager role}
-	Developing processes and improving relationships with key customers
+    \subsection{Migration of documentation to multi platform publishing}
+        \ifthenelse{\boolean{pdf}}{%
+	        Improved quality, reduced duplication and decoupled content from
+            presentation
+            \vspace{5pt}
+        }{%
+          % Situation
+            The aquisition of the company required rebranding our customer
+            facing documentation.  Reworking the word documents was going to be
+            a costly exercise taking 2 weeks.\\
+          % Target
+            We wanted to introduce a document lifecycle process and improve
+            the management of content so that it could adapt to future
+            requirements with minimal overhead.\\
+          % Action
+            To tackle the management of content, we made the decision to
+            migrate the contect to a markup language.  This allowed the content
+            to be decoupled from the presentation.  To introduce document
+            lifecycle management, we adopted the existing development workflow
+            utilising github and JIRA.\\
+          % Result
+            The consistency and accuracy of documentation has benefited.  With
+            changes to branding being able to be applied across the content in
+            4 hours rather than 2 weeks.  In addition to PDF documentation we
+            have also been able to publish the same content to HTML.}
+
+	\subsection{Develop components and design patterns for DSL}
+        \ifthenelse{\boolean{pdf}}{%
+	        Reduction in code reuse and defects for scripting projects
+            \vspace{5pt}
+        }{%
+          % Situation
+            Many solutions required the same or similar features that would be 
+            scripted for each project. This resulted in duplicate of effort and 
+            a high number of defects.
+          % Target
+            By creating a component library we could reduce the production time 
+            and increase the quality of solutions provided.
+          % Action
+            I produced a business case for the creation of a set of standard
+            components that was well received and gained approval for a proof 
+            of concept.  This became the first component of many that was 
+            produced and was able to be managed through a formal SDLC.
+          % Result
+            The average amount for time required to produce scripts was reduced 
+            by 40\%.  Defects were reduced and resolutions made easier as they 
+            were typically configuration related rather than bugs in the script.}
+
 }{}
+%
+% Management
+%
+\ifthenelse{\equal{\jobname}{\management}}{%
+	\subsection{Establishing Technical Account Manager role}
+        \ifthenelse{\boolean{pdf}}{%
+            Developing processes and improving relationships with key customers
+            \vspace{5pt}
+        }{%
+          % Situation
+            As a part of the customer success strategy, the business wanted to 
+            provide technical leadership and govenance to key customers.
+          % Target
+            A new Technical Account Manager role needed to be established and 
+            rolled out to key customers.  This would provide technical 
+            leadership of issue resolution and project delivery.
+          % Action
+            In a team of 6 technical consultants, across 3 continents we defined
+            the scope of the role, documented the intitial processes and a
+            continuous inprovement framework.
+          % Result
+            Over the first 6 months we were able to onboard 7 key accounts in
+            EMEA, reduce the issue backlog of these accounts from 64 to 38 and 
+            successfully mediate several project delivery conflicts.}
+
+    }{}

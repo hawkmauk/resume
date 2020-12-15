@@ -17,7 +17,9 @@ PDFDIR        = $(DISTDIR)/pdf
 HTMLDIR       = $(DISTDIR)
 
 # Documents to publish
-DOCUMENTS     = development management
+# 001-mhawkins-cv : Development focused CV
+# 002-mhawkins-cv : Management focused CV
+DOCUMENTS     = 001-mhawkins-cv 002-mhawkins-cv
 PDFDOCUMENTS  = $(foreach doc,$(DOCUMENTS),$(doc).pdf)
 HTMLDOCUMENTS = $(foreach doc,$(DOCUMENTS),$(doc).html)
 
