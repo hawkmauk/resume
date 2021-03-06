@@ -12,7 +12,6 @@ build/
 aclocal.m4
 autom4te.cache/
 Makefile.in
-build-aux/
 configure
 Makefile
 config.log

@@ -1,0 +1,10 @@
+AC_DEFUN([AC_PROG_HTLATEX],[
+AC_CHECK_PROGS(htlatex,[htlatex],no)
+export htlatex;
+if test $htlatex = "no" ;
+then
+	AC_MSG_ERROR([Unable to find a HTLaTeX application]);
+fi
+AC_SUBST(htlatex)
+])
+
