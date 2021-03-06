@@ -12,7 +12,6 @@ AC_CONFIG_FILES([Makefile])
 
 AC_CANONICAL_HOST
 
-
 # The user can disable building of the PDF of the manual, for example
 # if the required LaTeX packages are not installed
 AC_ARG_ENABLE([pdf-doc],

@@ -37,7 +37,7 @@ PDFOPTS       ?= --output-directory=$(PDFDIR) #--interaction=batchmode
 
 # tex4ht has default config options for html, xhtml etc or you can define your
 # own config file which is what we have here
-TEX4HTSTYOPTS  ?= "$(HTMLCONFIG)/tex4ht.cfg,tidy"
+TEX4HTSTYOPTS  ?= "$(HTMLCONFIG)/tex4ht.cfg,tidy,-css"
 # tex4ht options
 TEX4HTOPTS   ?= ""
 # t4ht options
@@ -64,7 +64,8 @@ CLEANFILES := $(foreach doc,$(DOCUMENTS),$(doc).log) \
 
 SUFFIXES = .tex .pdf
 
-TEXSRC := main.tex
+PDFSRC := main.tex
+HTMLSRC := main-html.tex
 
 # Several make rules to generate the PDF from the LaTeX source
 $(PDFDOCUMENTS):
@@ -72,30 +73,30 @@ $(PDFDOCUMENTS):
 	$(eval PDFOPTS += --jobname="$(basename $@)")
 	@echo === Making PDF: $@ from $^ ===
 	$(MKDIR_P) $(PDFDIR)
-	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(TEXSRC)
+	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(PDFSRC)
 	@while ( grep "Rerun to " $(MANNAME).log  ); do           \
         echo '** Re-running LaTeX **';      \
-		TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(TEXSRC); \
+		TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(PDFSRC); \
     done 
 	if [ -f $(MANNAME).idx ]; then \
         echo === Making index ===; \
         makeindex $(MANNAME); \
     fi
 	@echo === Making final PDF ===
-	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(TEXSRC)
+	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(PDFSRC)
 
 # The name of the input file must be changed to change the jobname so
 $(HTMLDOCUMENTS): clean
 	@echo === Making HTML ===
 	$(MKDIR_P) $(HTMLDIR)
 	cp -r $(HTMLCONFIG)/{css,img,js} $(HTMLDIR)/
-	ln -f -s $(SOURCEDIR)/$(TEXSRC) $(basename $@).tex
+	ln -f -s $(SOURCEDIR)/$(HTMLSRC) $(basename $@).tex
 	TEXINPUTS=$(HTMLINPUTS) $(HTMLBUILD) $(basename $@).tex $(HTMLOPTS)
 
 .tex.aux:
 	@echo === Making $@ file from $^ ===
 	$(MKDIR_P) $(PDFDIR)
-	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(TEXSRC)
+	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(HTMLSRC)
 
 # A target needed to keep track of the nr. of LaTeX runs
 .btmp:

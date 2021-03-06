@@ -6,11 +6,6 @@
 \usepackage{iftex}
 \usepackage{ifthen}
 
-% PDF specific package
-\ifpdf
-	\usepackage{resume}
-\fi
-
 % Define commands to alias the jobname used to generate different flavours
 \newcommand{\development}{\detokenize{001-mhawkins-cv}}
 \newcommand{\management}{\detokenize{002-mhawkins-cv}}
@@ -27,21 +22,9 @@
 \begin{document}
 %
 \maketitle
-%
-% COLUMN ONE
-%
-\begin{minipage}[t]{0.30\textwidth}
-\input{career-highlights}
+\input{statement}
 \input{education}
 \input{skills}
-\end{minipage}
-\hfill
-%
-% COLUMN TWO
-%
-\begin{minipage}[t]{0.60\textwidth}
-\input{statement}
+\input{career-highlights}
 \input{experience}
-\end{minipage}
-%
 \end{document}

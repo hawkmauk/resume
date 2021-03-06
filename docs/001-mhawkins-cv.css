@@ -1,121 +1,126 @@
 
 /* 001-mhawkins-cv.css from 001-mhawkins-cv.tex (TeX4ht) */
-
-.jumbotron{
-  background-image: url("file:///home/user/Development/github/resume/docs/img/neon.jpg");
-  background-color: black;
-  background-repeat: no-repeat;
-  background-size: 1500px;
-  background-position-y: -200px;
+  :root {
+  \background: black;
+  \foreground: white;
+  \primary: magenta;
+  \secondary: royalblue;
 }
-
 html body {
-  background-color: black;
-  color: white;
-}
-
-/* set the default style */
-html, body, h1, h2, h3, h4, h5, h6 {
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-}
-
-.row {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.titleHead {
-  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-  font-size: xxx-large;
-  font-weight: bold;
-  color: magenta;
-}
-/* Section headers */
-.sectionHead {
-  font-weight: bolder;
-  color: magenta;
-}
-
-.subsectionHead {
-  width: 100%;
-  font-size: larger;
-  color: royalblue;
-}
-
-a:link {
-  color: royalblue;
-  transition: all .2s ease-in;
-}
-
-a:hover {
-                                                                  
-
-                                                                  
-  color: magenta;
-}
-
-.page-header {
-  overflow: hidden;
-  margin-top: 10pt;
-  padding: 5px 20px;
-  width: 100%;
-
-
-  float: left;
-}
-
-#sec-1\.1, #sec-1\.2, #sec-1\.3 {
-  margin: auto;
+  font-size: large;
+  line-height: 1.5em;
+  background-color: var(background);
+  color: var(foreground);
 }
 
 p {
   margin-bottom: 0px;
   text-align: justify;
   text-justify: inter-word;
-  color: white;
 }
 
-#sec-3 h4{
-  display: inline;
-  width: auto;
-  margin-right: 10px;
-}
-#sec-3\.1.row {
-  text-align: right;
+a:link {
+  color: var(\-\-secondary);
+  transition: all .2s ease-in;
 }
 
-@media only screen and (min-width: 600px){
+a:hover {
+  color: var(primary);
+}
 
-  /* Three column layout */
-  #sec-1\.1, #sec-1\.2, #sec-1\.3 {
-    flex: 0 0 33%;
-    max-width: 33%;
-    float: left;
-  }
+#titleSection{
+  background-image: url("file:///home/user/Development/github/resume/docs/img/neon.jpg");
+  background-color: var(background);
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  background-position-y: -200px;
+}
 
-  /* Two column layout */
-  #sec-2, #sec-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    float: left;
-  }
+.section {
+  margin: auto;
+  width: 50%;
+  min-height: 100vh;
+}
 
-  #sec-5 .row {
+/* Section headers */
+.sectionHead {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: var(primary);
                                                                   
 
                                                                   
-    flex: 0 0 50%;
-    max-width: 50%;
-    float: left;
+}
+
+.subsectionHead {
+  width: 100%;
+  font-size: larger;
+  color: var(secondary);
+}
+
+/* Navmenu */
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+  width: 100%;
+  height: 50px;
+  background: #000;
+  /* Optional */
+  position: sticky;
+  top: 0;
+}
+
+:target:before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+}
+
+/* Hide Hamburger */
+#hamnav label, #hamburger { display: none; }
+
+/* Horizontal Menu Items */
+#hamitems { display: flex; }
+#hamitems a {
+  width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: var(foreground);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+#hamitems a:hover {
+  background: var(secondary);
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* Show Hamburger Icon */
+  #hamnav label {
+    display: inline-block;
+                                                                  
+
+                                                                  
+    color: var(foreground);
+    background: var(background);
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
   }
 
-  #sec-5\.1, #sec-5\.3 {
-    clear:left;
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
   }
 
-
-
-
+  /* Toggle Show/Hide Menu */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
 }
 
     
