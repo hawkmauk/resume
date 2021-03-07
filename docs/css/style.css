@@ -1,8 +1,8 @@
 :root {
-  --background: black;
-  --foreground: white;
-  --primary: magenta;
-  --secondary: royalblue;
+  --background: white;
+  --foreground: black;
+  --primary: royalblue;
+  --secondary: grey;
 }
 
 html body {
@@ -11,6 +11,8 @@ html body {
   line-height: 1.5em;
   background-color: var(--background);
   color: var(--foreground);
+  margin:0px;
+  min-width: 750px;
 }
 
 span {
@@ -24,46 +26,53 @@ p {
 }
 
 a:link {
-  color: var(\-\-secondary);
+  color: var(--secondary);
   transition: all .2s ease-in;
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--primary);
 }
 
+a:visited {
+  color: var(--secondary);
+}
+
 #title {
-  font-size: xx-large;
-  color: var(--primary)
+  font-size: xxx-large;
+  color: var(--primary);
 }
 
 #author {
   float: left;
+  color: var(--secondary);
+  text-decoration: none;
 }
 
 #links {
   float: right;
+  color: var(--secondary);
+  text-decoration: none;
 }
 
 #titleSection{
-  background-image: url("file:///home/user/Development/github/resume/docs/img/neon.jpg");
-  background-color: var(--background);
-  background-repeat: no-repeat;
-  background-size: 1200px;
-  background-position-y: -200px;
-  background-position-x: 50%;
-  height: 100px;
-  width: 89%;
-  margin:auto;
+  background-color: var(--foreground);
+  color: var(--background);
+  height: 200px;
+  width: 90%;
+  padding: 1px 5%;
+  margin: 0px;
 }
 
-#sec-2\.1 p, #sec-2\.2 p {
+#sec-5\.1 p, #sec-5\.2 p {
   width: 50%;
   margin:auto;
 }
 
-#sec-2\.1 span, #sec-2\.2 span {
+#sec-5\.1 span, #sec-5\.2 span {
   font-size: xx-large;
+  color: var(--secondary);
 }
 
 .section {
@@ -130,13 +139,18 @@ a:hover {
   .section {
     width: 90%;
   }
+
   /* Show Hamburger Icon */
   #hamnav label {
-    display: inline-block;
-    font-style: normal;
-    font-size: 1.2em;
-    padding: 10px;
-    font-size: xxx-large;
+    display: block;
+    color: var(--background);
+    font-size: xx-large;
+    height: 50px;
+    text-indent: 5%;
+    line-height: 55px;
+  }
+  .likesectionHead {
+    display: none;
   }
 
   /* Break down menu items into vertical */
@@ -144,14 +158,18 @@ a:hover {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    font-size: xx-large;
-    padding:20px;
+    font-size: x-large;
+    padding:10px;
   }
 
   /* Toggle Show/Hide Menu */
   #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
 }
+
+
 
 
 
