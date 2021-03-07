@@ -33,19 +33,16 @@ a:hover {
 }
 
 #title {
-  margin-left: 10%;
   font-size: xx-large;
   color: var(--primary)
 }
 
 #author {
   float: left;
-  margin-left: 10%;
 }
 
 #links {
   float: right;
-  margin-right: 10%;
 }
 
 #titleSection{
@@ -56,6 +53,8 @@ a:hover {
   background-position-y: -200px;
   background-position-x: 50%;
   height: 100px;
+  width: 89%;
+  margin:auto;
 }
 
 #sec-2\.1 p, #sec-2\.2 p {
@@ -70,7 +69,7 @@ a:hover {
 .section {
   margin: auto;
   width: 60%;
-  min-height: 100vh;
+  min-height: 500px;
 }
 
 /* Section headers */
@@ -137,6 +136,7 @@ a:hover {
     font-style: normal;
     font-size: 1.2em;
     padding: 10px;
+    font-size: xxx-large;
   }
 
   /* Break down menu items into vertical */
@@ -144,11 +144,14 @@ a:hover {
     box-sizing: border-box;
     display: block;
     width: 100%;
+    font-size: xx-large;
+    padding:20px;
   }
 
   /* Toggle Show/Hide Menu */
   #hamitems { display: none; }
   #hamnav input:checked ~ #hamitems { display: block; }
 }
+
 
 
