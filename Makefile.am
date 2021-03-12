@@ -85,6 +85,9 @@ $(PDFDOCUMENTS):
 	@echo === Making final PDF ===
 	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) $(PDFSRC)
 
+coverletter.pdf:
+	TEXINPUTS=$(PDFINPUTS) $(PDFBUILD) $(PDFOPTS) coverletter.tex
+
 # The name of the input file must be changed to change the jobname so
 $(HTMLDOCUMENTS): clean
 	@echo === Making HTML ===
