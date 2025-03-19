@@ -6,7 +6,30 @@
 % Development
 %
 \ifthenelse{\equal{\jobname}{\development}}{%
-        \subsection{\href{https://github.com/runcrypto/static-discharge}
+
+    \subsection{Lead the creation of new product development team}
+    \ifthenelse{\boolean{pdf}}{%
+      Develop and implement processes and CI/CD pipelines for the new team.
+        \vspace{5pt}
+    }{%
+      % Situation
+        A software project had been created for a customer and was identified
+        as a potential candidate for further development.  A new team was
+        created to manage the forward development of the project as a product.\\
+      % Target
+        The team processes and CI/CD pipelines needed to be created as well as
+        providing the required infrastructure for a robust development lifecycle.\\
+      % Action
+        I led the team through a transition from a project to a product,
+        mentoring junior members and providing technical leadership.  Driving
+        a collaborative approach we defined the processes and CI/CD pipelines.\\
+      % Result
+        The project was successfully transitioned to a product, with the team
+        being highly motivated and a development processes that has been held
+        up as an example of excellence and adopted by other teams.
+    }    
+
+    \subsection{\href{https://github.com/runcrypto/static-discharge}
         {Prototype contactless bitcoin lightning payments}}
         \ifthenelse{\boolean{pdf}}{%
             Add functionality to open source mobile wallet and build terminal
@@ -58,28 +81,28 @@
             have also been able to publish the same content to HTML.
         }
 
-	\subsection{Develop components and design patterns for DSL}
-        \ifthenelse{\boolean{pdf}}{%
-	        Reduction in code reuse and defects for scripting projects
-            \vspace{5pt}
-        }{%
-          % Situation
-            Many solutions required the same or similar features that would be 
-            scripted for each project. This resulted in duplicate of effort and 
-            a high number of defects.\\
-          % Target
-            By creating a component library we could reduce the production time 
-            and increase the quality of solutions provided.\\
-          % Action
-            I produced a business case for the creation of a set of standard
-            components that was well received and gained approval for a proof 
-            of concept.  This became the first component of many that was 
-            produced and was able to be managed through a formal SDLC.\\
-          % Result
-            The average amount for time required to produce scripts was reduced 
-            by 40\%.  Defects were reduced and resolutions made easier as they 
-            were typically configuration related rather than bugs in the script.
-        }
+	% \subsection{Develop components and design patterns for DSL}
+  %       \ifthenelse{\boolean{pdf}}{%
+	%         Reduction in code reuse and defects for scripting projects
+  %           \vspace{5pt}
+  %       }{%
+  %         % Situation
+  %           Many solutions required the same or similar features that would be 
+  %           scripted for each project. This resulted in duplicate of effort and 
+  %           a high number of defects.\\
+  %         % Target
+  %           By creating a component library we could reduce the production time 
+  %           and increase the quality of solutions provided.\\
+  %         % Action
+  %           I produced a business case for the creation of a set of standard
+  %           components that was well received and gained approval for a proof 
+  %           of concept.  This became the first component of many that was 
+  %           produced and was able to be managed through a formal SDLC.\\
+  %         % Result
+  %           The average amount for time required to produce scripts was reduced 
+  %           by 40\%.  Defects were reduced and resolutions made easier as they 
+  %           were typically configuration related rather than bugs in the script.
+  %       }
 }{}
 %
 % Management
