@@ -2,213 +2,97 @@
 %      CAREER HIGHLIGHTS
 %
 \section{Career Highlights}
-%
-% Development
-%
-\ifthenelse{\equal{\jobname}{\development}}{%
 
-    \subsection{Lead the creation of new product development team}
-    \ifthenelse{\boolean{pdf}}{%
-      Develop and implement processes and CI/CD pipelines for the new team.
-        \vspace{5pt}
-    }{%
+\subsection{AI Product Development}
+  % Situation
+    The goal was to develop an AI product to bridge business process modeling and low-code
+    software modeling tools, using AI to identify entities and form data models.\\
+  % Target
+    The product required architectural decisions for model translation and system integration
+    between the AI service and low-code platform.\\
+  % Action
+    As technical subject matter expert and architectural contributor on a cross-departmental team,
+    I designed the technical architecture for model translations, leveraging MBSE principles.\\
+  % Result
+    Successfully launched product on track to become a major revenue stream, with architectural
+    patterns serving as foundation for future AI integrations.\\
+
+\subsection{Rent Data Analytics Platform Productization}
+  % Situation
+    A customer software project was identified as a product candidate requiring full
+    productization with proper engineering infrastructure.\\
+  % Target
+    Transition the platform from project to product with dedicated development team, CI/CD
+    infrastructure, engineering processes, and scalable architecture.\\
+  % Action
+    I architected the technical foundation and led productization, building the development
+    team from the ground up, establishing CI/CD pipelines, defining engineering standards,
+    and implementing scalable system architectures.\\
+  % Result
+    Successfully productized the platform with engineering processes adopted as organizational
+    templates by other product teams.\\
+
+\subsection{Software Upgrade Program Technical Strategy}
+    % Situation
+    Adobe announced Flash retirement in 2021, requiring migration of Flash-based components
+    across approximately 300 customer deployments.\\
+    % Target
+    Upgrade 300 customers in an 18-month period with no deadline extension, necessitating
+    technical strategy for scalable upgrade processes and automation.\\
+    % Action
+    I architected technical strategies for upgrade automation, designed scalable deployment
+    patterns, and established engineering processes enabling efficient resource planning
+    across concurrent upgrades.\\
+    % Result
+    Achieved 97\% completion rate (292 of 300 customers) by deadline, with technical frameworks
+    enabling efficient execution at scale.\\
+
+\subsection{\href{https://github.com/runcrypto/static-discharge}
+    {Prototype Contactless Bitcoin Lightning Payments}}
       % Situation
-        A software project had been created for a customer and was identified
-        as a potential candidate for further development.  A new team was
-        created to manage the forward development of the project as a product.\\
+        For the second Boltathon (Lightning Hackathon), I identified a UX gap where Bitcoin
+        Lightning wallets lacked contactless payment capabilities available in traditional
+        mobile payment systems.\\
       % Target
-        The team processes and CI/CD pipelines needed to be created as well as
-        providing the required infrastructure for a robust development lifecycle.\\
+        Design and implement an NFC-based contactless payment solution for Bitcoin Lightning
+        networks, requiring integration between hardware terminal and mobile wallet software.\\
       % Action
-        I led the team through a transition from a project to a product,
-        mentoring junior members and providing technical leadership.  Driving
-        a collaborative approach we defined the processes and CI/CD pipelines.\\
+        Over 48 hours, I architected and implemented a full-stack solution: designed a payment
+        requester terminal using Raspberry Pi with RC532 NFC breakout board, and extended the
+        open-source zap-android wallet with NFC functionality.\\
       % Result
-        The project was successfully transitioned to a product, with the team
-        being highly motivated and a development processes that has been held
-        up as an example of excellence and adopted by other teams.
-    }    
+        Delivered working prototype demonstrating contactless Bitcoin Lightning payments, with
+        NFC enhancement refined and merged into main zap-android project.\\
 
-    \subsection{\href{https://github.com/runcrypto/static-discharge}
-        {Prototype contactless bitcoin lightning payments}}
-        \ifthenelse{\boolean{pdf}}{%
-            Add functionality to open source mobile wallet and build terminal
-            with R-PI and RC532 breakout board
-            \vspace{5pt}
-        }{%
-          % Situation
-            For my entry in the second boltathon (lightning hackathon) I wanted
-            to address a UX issue with using mobile wallets.\\
-          % Target
-            The existing payment methods in the market from Google and Apple
-            all utilise Near Field Communication (NFC) to provide contactless
-            payment.  This was not available for bitcoin lightning wallets.\\
-          % Action
-            The solution involved creating a payment requester terminal from a
-            a Raspberry PI with a RC532 breakout board and a mobile device
-            running a bitcoin lightning wallet which I would add NFC
-            functionality to.\\
-          % Result
-            I was able to produce a prototype terminal and extend the open
-            source zap-android wallet, the enhancement was refined and merged
-            into the main project.\\
-            \href{https://github.com/LN-Zap/zap-android/issues/158}{see on github}
-        }
+\subsection{Technical Account Manager Role Establishment}
+      % Situation
+        The business needed to establish technical leadership and governance frameworks
+        for key enterprise customers to improve issue resolution and project delivery.\\
+      % Target
+        Design and implement a Technical Account Manager role providing technical leadership,
+        engineering standards, and technical decision-making for critical accounts.\\
+      % Action
+        As part of a six-person technical team across three continents, I architected the
+        technical governance framework, defined engineering practices and standards, and
+        established technical leadership processes.\\
+      % Result
+        Successfully rolled out the role to seven key accounts in EMEA over six months,
+        reducing technical issue backlog by 41\% (from 64 to 38) and improving project
+        delivery outcomes.\\
 
-    \subsection{Migration of documentation to multi platform publishing}
-        \ifthenelse{\boolean{pdf}}{%
-	        Improved quality, reduced duplication and decoupled content from
-            presentation
-            \vspace{5pt}
-        }{%
-          % Situation
-            The acquisition of the company required rebranding our customer
-            facing documentation.  Reworking the word documents was going to be
-            a costly exercise taking 2 weeks.\\
-          % Target
-            I wanted to introduce a document life-cycle process and improve
-            the management of content so that it could adapt to future
-            requirements with minimal overhead.\\
-          % Action
-            To tackle the management of content I migrated the content to a
-            markup language.  This allowed the content to be decoupled from the
-            presentation.  Git and JIRA were used to implement continuous
-            improvement.\\
-          % Result
-            The consistency and accuracy of documentation has benefited.  With
-            changes to branding being able to be applied across the content in
-            4 hours rather than 2 weeks.  In addition to PDF documentation we
-            have also been able to publish the same content to HTML.
-        }
-
-	% \subsection{Develop components and design patterns for DSL}
-  %       \ifthenelse{\boolean{pdf}}{%
-	%         Reduction in code reuse and defects for scripting projects
-  %           \vspace{5pt}
-  %       }{%
-  %         % Situation
-  %           Many solutions required the same or similar features that would be 
-  %           scripted for each project. This resulted in duplicate of effort and 
-  %           a high number of defects.\\
-  %         % Target
-  %           By creating a component library we could reduce the production time 
-  %           and increase the quality of solutions provided.\\
-  %         % Action
-  %           I produced a business case for the creation of a set of standard
-  %           components that was well received and gained approval for a proof 
-  %           of concept.  This became the first component of many that was 
-  %           produced and was able to be managed through a formal SDLC.\\
-  %         % Result
-  %           The average amount for time required to produce scripts was reduced 
-  %           by 40\%.  Defects were reduced and resolutions made easier as they 
-  %           were typically configuration related rather than bugs in the script.
-  %       }
-}{}
-%
-% Management
-%
-\ifthenelse{\equal{\jobname}{\management}}{%
-  \subsection{Project Productization}
-    \ifthenelse{\boolean{pdf}}{%
-          Successfully transitioned several projects to products through
-          redesign and introduction of new processes.  Mentoring teams
-          through the transformation and providing technical leadership,
-          setting expectations to other areas of the business.\\
-    }{%
-          % Situation
-          A software project for a large customer site had been successfully
-          completed and other sites were keen to implement it at their own
-          sites.\\
-          % Target
-          There was another site in project and dozens of others that were
-          also being targeted as consumers of the application.  We needed to
-          ensure that the application could be managed as a single product
-          and not a collection of individual projects.\\
-          % Action
-          To secure the investment by Netcall I produced a business case for
-          migrating to a product development model.  Whilst awaiting approval,
-          I led the development ensuring that the additional features would
-          allow for a stategic migration.\\
-          % Result
-          The second project was completed and at the start of the third
-          project we were able to fully transition to a product methodology
-          and build out the infrastructure and processes for governance of
-          the new product.
-    }
-
-    \subsection{Upgrade Role-out}
-	    \ifthenelse{\boolean{pdf}}{%
-            Successfully managed processes and capacity through aggressive
-            roll-out of software update to 300 customers over 18 months at
-            Advanced.  The project was completed before the hard deadline when
-            Adobe Flash was disabled in Jan 2021.\\
-	    }{%
-            % Situation
-            Adobe announced in 2018 that Flash would no longer work after Jan
-            2021.  Several software components used Flash that would need to
-            upgraded.\\
-            % Target
-            We had around 300 customers to upgrade in an 18 month period with
-            no scope for moving the deadline.  Each upgrade project was to
-            average a 6 week life-cycle and included one or more test systems.\\
-            % Action
-            Working a member of the  programme committee I managed the
-            resource capacity planning and provided feedback on opportunities
-            to improve processes.\\
-            % Result
-            The programme was completed with only 8 customers not upgraded by
-            the time that Flash was retired.  The weekly update meetings with
-            the team were effective at building trust, collaboration, sharing
-            information and strengthening performance.
-	    }
-
-	\subsection{Establishing Technical Account Manager role}
-        \ifthenelse{\boolean{pdf}}{%
-            Lead the development of processes and relationships in the new role
-            of technical account manager and customer success team at eGain.
-            Engaging with key customers to drive new revenue and retention.
-            \vspace{5pt}
-        }{%
-          % Situation
-            As a part of the customer success strategy, the business wanted to 
-            provide technical leadership and governance to key customers.\\
-          % Target
-            A new Technical Account Manager role needed to be established and 
-            rolled out to key customers.  This would provide technical 
-            leadership of issue resolution and project delivery.\\
-          % Action
-            In a team of 6 technical consultants, across 3 continents we defined
-            the scope of the role, documented the initial processes and a
-            continuous improvement framework.\\
-          % Result
-            Over the first 6 months we were able to onboard 7 key accounts in
-            EMEA, reduce the issue backlog of these accounts from 64 to 38 and 
-            successfully mediate several project delivery conflicts.
-        }
-
-    % \subsection{Leading change to Agile Methodologies}
-    %     \ifthenelse{\boolean{pdf}}{%
-    %         Delivered change through research and training the Professional
-    %         Services delivery team, transitioning to an Agile Development
-    %         workflows.  A part of a company wide initiative at Pitney Bowes
-    %         Software working with Mike Cohn of Mountain Goat Software.
-    %         \vspace{5pt}
-    %     }{%
-    %         % Situation
-    %         Pitney Bowes Software consisted of several mature products that
-    %         were managed with a traditional waterfall methodology.
-    %         % Target
-    %         As a part of a strategic change program, the development life-cycle
-    %         and professional services delivery frameworks were to adopt an
-    %         agile approach.
-    %         % Action
-    %         As the professional services representative in the program, I
-    %         researched and attended training sessions with Mike Cohn of
-    %         Mountain Goat Software to provide an implementation plan to the
-    %         management team and deliver training to the other team members.
-    %         % Result
-    %         Over 3 months we were able to start delivering agile project
-    %         management and iterative delivery of solutions which decreased the
-    %         defects through the increased test cycles.
-    %     }
-}{}
+% \subsection{Documentation Platform Technical Transformation}
+% % Situation
+%   The acquisition of the company required rebranding customer-facing documentation, with
+%   traditional Word document workflows creating significant maintenance overhead and cost.\\
+% % Target
+%   Design and implement a technical solution that decouples content from presentation,
+%   enables automated multi-format publishing, and establishes a maintainable documentation
+%   lifecycle with version control and continuous improvement.\\
+% % Action
+%   Architected and implemented a LaTeX-based documentation platform with Git version control
+%   and JIRA integration, establishing engineering practices for content management that
+%   separated content structure from presentation logic, enabling automated multi-format output.\\
+% % Result
+%   Reduced rebranding overhead by 95\% (from weeks to four hours), improved documentation
+%   consistency and accuracy, and enabled automated publishing to both PDF and HTML formats
+%   from a single source, establishing a scalable documentation engineering practice.

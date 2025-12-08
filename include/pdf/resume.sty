@@ -28,6 +28,10 @@
 \usepackage{tgadventor}
 \renewcommand{\familydefault}{\sfdefault}
 
+% Decrease default font size by 2pt
+\renewcommand\normalsize{\@setfontsize\normalsize{8}{10}}%
+\normalsize
+
 % Date command
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{isodate}
@@ -49,7 +53,6 @@
 	\centering{
 		\color{headings}
 		\normalsize \@author}\\
-		\scriptsize Published: \today\ | View latest online at \href{http://hawkmauk.github.io/resume/\jobname.html}{http://hawkmauk.github.io/resume/\jobname.html}
 	\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
 	\vspace{-15pt}
 
@@ -58,8 +61,8 @@
 % Headings command
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt} 
-\titlespacing{\subsection}{0pt}{10pt}{0pt}
-\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{5pt}{0pt}{2.5pt}
+\titlespacing{\subsubsection}{5pt}{0pt}{2.5pt}
 
 \titleformat{\section}{%
 	\color{headings}\scshape\large\raggedright\uppercase}{}{0em}{}
@@ -71,20 +74,6 @@
 \titleformat{\subsubsection}{%
 	\color{headings}\raggedright\normalsize}{}{0em}{}
 
-% Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{
-	\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
-	{\end{itemize}\vspace{-\topsep}
-}
-
-% redefine itemize
-\let\olditemize=\itemize
-\let\oldenditemize=\enditemize
-
-\renewenvironment{itemize}%
-	{\vspace{-\topsep} \olditemize \itemsep1pt \parskip0pt \parsep0pt}
-	{\oldenditemize \vspace{-\topsep}}
-
 % add space at end of section
 \let\oldsection\section
 \renewcommand\section[1]%
@@ -94,3 +83,11 @@
 \let\oldtextit\textit
 \renewcommand\textit[1]%
 	{\begingroup\color{headings}\oldtextit{#1}\endgroup}
+
+% redefine itemize
+\let\olditemize=\itemize
+\let\oldenditemize=\enditemize
+
+\renewenvironment{itemize}%
+    {\olditemize \itemsep0pt \parskip0pt \parsep0pt}%
+    {\oldenditemize\vspace{-6pt}}

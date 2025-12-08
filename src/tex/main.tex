@@ -5,15 +5,20 @@
 \usepackage[T1]{fontenc}
 \usepackage{iftex}
 \usepackage{ifthen}
+\usepackage{tabularx}
 
-% PDF specific package
+% PDF specific package - use the correct path
 \ifpdf
-	\usepackage{resume}
+	\usepackage{../../include/pdf/resume}
 \fi
 
-% Define commands to alias the jobname used to generate different flavours
-\newcommand{\development}{\detokenize{001-mhawkins-cv}}
-\newcommand{\management}{\detokenize{002-mhawkins-cv}}
+% Define boolean for PDF vs HTML formatting without redefining \ifpdf
+\newboolean{ispdf}
+\ifpdf
+  \setboolean{ispdf}{true}
+\else
+  \setboolean{ispdf}{false}
+\fi
 
 %
 % TITLE HEADER
@@ -22,26 +27,33 @@
 \title{Michael Hawkins}
 % As the author is actually the title we want contact info here
 \author{\href{mailto:michael.hawkins@protonmail.com}{michael.hawkins@protonmail.com} | +44 (0)779 308 1223}
-\date{Last Updated: \today}
 
 \begin{document}
 %
 \maketitle
 %
-% COLUMN ONE
-%
-\begin{minipage}[t]{0.30\textwidth}
-\input{career-highlights}
-\input{education}
-\input{skills}
-\end{minipage}
-\hfill
-%
-% COLUMN TWO
-%
-\begin{minipage}[t]{0.60\textwidth}
 \input{statement}
-\input{experience}
+
+\vspace{12pt}
+
+\noindent
+\begin{minipage}[t]{0.3\textwidth}
+  \input{skills}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+  \input{career-highlights}
 \end{minipage}
-%
+
+\vspace{12pt}
+
+\noindent
+\begin{minipage}[t]{0.3\textwidth}
+  \input{education}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+  \input{experience}
+\end{minipage}
+
 \end{document}
